@@ -1,63 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Calculator</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="calculator">
-      <div class="display" id="display">0</div>
-      <div class="buttons">
-        <!-- Row 1 -->
-        <button class="btn function" data-value="C">C</button>
-        <button class="btn function" data-value="DEL">DEL</button>
-        <button class="btn function" data-value="(">(</button>
-        <button class="btn function" data-value=")">)</button>
-
-        <!-- Row 2 -->
-        <button class="btn number" data-value="7">7</button>
-        <button class="btn number" data-value="8">8</button>
-        <button class="btn number" data-value="9">9</button>
-        <button class="btn operator" data-value="/">÷</button>
-
-        <!-- Row 3 -->
-        <button class="btn number" data-value="4">4</button>
-        <button class="btn number" data-value="5">5</button>
-        <button class="btn number" data-value="6">6</button>
-        <button class="btn operator" data-value="*">×</button>
-
-        <!-- Row 4 -->
-        <button class="btn number" data-value="1">1</button>
-        <button class="btn number" data-value="2">2</button>
-        <button class="btn number" data-value="3">3</button>
-        <button class="btn operator" data-value="-">−</button>
-
-        <!-- Row 5 -->
-        <button class="btn number" data-value="0">0</button>
-        <button class="btn number" data-value=".">.</button>
-        <button class="btn function" data-value="PI">π</button>
-        <button class="btn operator" data-value="+">+</button>
-
-        <!-- Row 6 -->
-        <button class="btn function" data-value="sqrt">√</button>
-        <button class="btn function" data-value="^2">x²</button>
-        <button class="btn function" data-value="log">log</button>
-        <button class="btn function" data-value="exp">eˣ</button>
-
-        <!-- Row 7 -->
-        <button class="btn function" data-value="sin">sin</button>
-        <button class="btn function" data-value="cos">cos</button>
-        <button class="btn function" data-value="tan">tan</button>
-        <button class="btn equal" data-value="=">=</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classic Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="calculator">
+    <div class="display-container">
+      <div class="display-branding">CASIO-STYLE 9000</div>
+      <div class="previous-operand" id="previous-operand"></div>
+      <div class="current-operand" id="display">0</div>
     </div>
-
-    <script src="script.js"></script>
-  </body>
+    
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button class="btn fn-btn clear" data-action="clear">C</button>
+      <button class="btn fn-btn" data-action="delete">DEL</button>
+      <button class="btn fn-btn" data-action="percent">%</button>
+      <button class="btn op-btn" data-action="operator" data-value="/">÷</button>
+      
+      <!-- Row 2 -->
+      <button class="btn num-btn" data-value="7">7</button>
+      <button class="btn num-btn" data-value="8">8</button>
+      <button class="btn num-btn" data-value="9">9</button>
+      <button class="btn op-btn" data-action="operator" data-value="*">×</button>
+      
+      <!-- Row 3 -->
+      <button class="btn num-btn" data-value="4">4</button>
+      <button class="btn num-btn" data-value="5">5</button>
+      <button class="btn num-btn" data-value="6">6</button>
+      <button class="btn op-btn" data-action="operator" data-value="-">−</button>
+      
+      <!-- Row 4 -->
+      <button class="btn num-btn" data-value="1">1</button>
+      <button class="btn num-btn" data-value="2">2</button>
+      <button class="btn num-btn" data-value="3">3</button>
+      <button class="btn op-btn" data-action="operator" data-value="+">+</button>
+      
+      <!-- Row 5 -->
+      <button class="btn num-btn zero" data-value="0">0</button>
+      <button class="btn num-btn" data-value=".">.</button>
+      <button class="btn eq-btn" data-action="calculate">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
